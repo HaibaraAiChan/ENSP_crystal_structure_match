@@ -133,10 +133,10 @@ def mapping(input_csv, pdb_path, seq_path, total_seq_path, output):
                     continue
 
                 position_y = pos_y_t - offset_y
-
-                w_str = '{}\t{:>10}\t{}\t{}\t{}\t{}\t{:<5}\t{:>5}{:>5}{:>3}{:>5}{:>3}\n'. \
-                    format(protein, snp, wt_codon, mutant_codon, mutant, disorder, str(confidence), \
-                           struct, str(position_x), wt, str(position_y), pure_y_seq[position_y - 1])
+                w_str = '{}\t{:>10}\t{}\t{}\t{}\t{}\t{:<5}\t{:<3}{:>5}\t{:>5}{:>5}{:>3}\n'. \
+                    format(protein, snp, wt_codon, mutant_codon, wt,  mutant, str(position_x), disorder,str(confidence), \
+                           struct,  str(position_y), pure_y_seq[position_y - 1])
+                
                 f_out.write(w_str)
     f_out.close()
 
