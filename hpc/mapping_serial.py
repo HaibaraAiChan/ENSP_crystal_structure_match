@@ -28,15 +28,15 @@ def getArgs():
                         help='the folder of output')
 
     parser.add_argument('-pdb',
-                        default='../Monsif/pdb_only/',
+                        default='../pdb_only/',
                         required=False,
                         help='the folder of pdb')
     parser.add_argument('-fasta',
-                        default='../Monsif/fasta/',
+                        default='../fasta/',
                         required=False,
                         help='the folder of fasta')
     parser.add_argument('-test',
-                        default='../Monsif/test/',
+                        default='../test/',
                         required=False,
                         help='the folder of test')
     return parser.parse_args()
