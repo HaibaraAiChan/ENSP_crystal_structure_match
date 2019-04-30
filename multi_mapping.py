@@ -1,7 +1,6 @@
 from __future__ import division
 import pandas as pd
 import numpy as np
-import zipfile
 
 from Bio.SubsMat.MatrixInfo import blosum62
 import re
