@@ -2,6 +2,7 @@ HPC Gnuparallel
 split SNPs_with_crystal_structure into several part, feed them to cores coorespondently.  
 1. gen_input_lst.py sepreate SNPs_with_crystal_structure into N parts(N % 16 ==0, hpc each node has 16 cores )  
     and generate 'input.lst' which will feed to 'pbs.script' 
-2. qsub pbs.script to hpc, the number of nodes applied should be N/16. (eg. N=16 ~ 1node, N=48 ~ 3nodes)
+2. qsub pbs.script to hpc, the number of nodes applied should be N/16. (eg. N=16 ~ 1node, N=48 ~ 3nodes, N=128 ~ 8nodes)  
+   (8 nodes: 45 mins on supermike)
 3. combine_folder.py can combine N part into one file.
 4. load module python, gcc, gnuparallel all included in ~/.modules
