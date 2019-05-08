@@ -1,8 +1,9 @@
 # ENSP_crystal_structure_match  
 
-###  Library needed:  
+###  Library packages needed:  
 ```
-pandas,  numpy,  biopython,  re,  python2.7  
+biopandas, biopython 
+# import pandas,  numpy,  Bio,  re,  python2.7  
 ```  
 ## local PC version  
 ### Instructions:  
