@@ -22,7 +22,7 @@ split SNPs_with_crystal_structure into several part(every little part has titile
                 module load gnuparallel/20180222/INTEL-18.0.0
     $ conda create -n your_env python-2.7
     $ source activate your_env
-    $ conda install pandas
+    $ conda install biopandas
     $ conda install biopython
     
 1. 'python gen_input_lst.py -numLst N' sepreate SNPs_with_crystal_structure into N parts  
