@@ -2,7 +2,7 @@
 
 ###  Library needed:  
 ```
-pandas,  numpy,  Bio,  re,  python2.7  
+pandas,  numpy,  biopython,  re,  python2.7  
 ```  
 ## local PC version  
 ### Instructions:  
@@ -17,6 +17,11 @@ pandas,  numpy,  Bio,  re,  python2.7
 
 ```
 split SNPs_with_crystal_structure into several part, feed them to cores coorespondently.  
+0. ~/.modules : module load python-2.7.14-anaconda
+    $ conda create -n your_env python-2.7
+    $ source activate your_env
+    $ conda install pandas
+    $ conda install biopython
 1. 'python gen_input_lst.py -numLst N' sepreate SNPs_with_crystal_structure into N parts  
     (N % 16 ==0, hpc each node has 16 cores )  
     and generate 'input.lst' which will feed to 'pbs.script' 
