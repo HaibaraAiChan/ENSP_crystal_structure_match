@@ -1,9 +1,9 @@
 # ENSP_crystal_structure_match  
 
 ###  Library packages needed:  
-```
-biopandas, biopython 
-# import pandas,  numpy,  Bio,  re,  python2.7  
+``` 
+biopandas, biopython, python2.7 
+# import pandas,  numpy,  Bio,  re  
 ```  
 ## local PC version  
 ### Instructions:  
@@ -18,13 +18,16 @@ biopandas, biopython
 
 ```
 split SNPs_with_crystal_structure into several part(every little part has titile), feed them to cores coorespondently.  
-0. ~/.modules : module load python/2.7.14-anaconda
-                module load gnuparallel/20180222/INTEL-18.0.0
-    $ conda create -n your_env python-2.7
+0. load module python, gcc, gnuparallel all you needed in ~/.modules
+    ~/.modules : module load python/2.7.14-anaconda
+                 module load gnuparallel/20180222/INTEL-18.0.0
+    $ conda create -n your_env python=2.7
     $ source activate your_env
     $ conda install biopandas
     $ conda install biopython
-    
+   
+   ***** all the path needed in scripts should be changed to our own path ******
+   
 1. 'python gen_input_lst.py -numLst N' sepreate SNPs_with_crystal_structure into N parts  
     (N % 16 ==0, hpc each node has 16 cores )  
     and generate 'input.lst' which will feed to 'pbs.script' 
@@ -32,5 +35,5 @@ split SNPs_with_crystal_structure into several part(every little part has titile
    (eg. N=16 ~ 1node, N=48 ~ 3nodes, N=128 ~ 8nodes)  
    (8 nodes: 45 mins on supermike)
 3. 'python combine_folder.py' can combine N part into one file.
-4. load module python, gcc, gnuparallel all included in ~/.modules  
+  
 ```
