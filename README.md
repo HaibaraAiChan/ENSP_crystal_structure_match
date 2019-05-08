@@ -16,7 +16,7 @@ pandas,  numpy,  biopython,  re,  python2.7
 **_hpc/_ folder contains gnuparallel method processing on SupreMike**   
 
 ```
-split SNPs_with_crystal_structure into several part, feed them to cores coorespondently.  
+split SNPs_with_crystal_structure into several part(every little part has titile), feed them to cores coorespondently.  
 0. ~/.modules : module load python-2.7.14-anaconda
     $ conda create -n your_env python-2.7
     $ source activate your_env
