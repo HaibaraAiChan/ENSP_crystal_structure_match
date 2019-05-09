@@ -2,7 +2,7 @@
 
 ###  Library packages needed:  
 ``` 
-biopandas, biopython, python2.7 
+pandas, biopython, python2.7 
 # import pandas,  numpy,  Bio,  re  
 ```  
 ## local PC version  
@@ -23,7 +23,7 @@ split SNPs_with_crystal_structure into several part(every little part has titile
                  module load gnuparallel/20180222/INTEL-18.0.0
     $ conda create -n your_env python=2.7
     $ source activate your_env
-    $ conda install biopandas
+    $ conda install pandas
     $ conda install biopython
    
    ***** all the path needed in scripts should be changed to our own path ******
