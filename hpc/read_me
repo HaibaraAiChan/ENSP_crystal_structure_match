@@ -4,7 +4,7 @@ split SNPs_with_crystal_structure into several part, feed them to cores coorespo
     and generate 'input.lst' which will feed to 'pbs.script' 
 2. 'qsub pbs.script' to hpc, the number of nodes applied should be N/16. (eg. N=16 ~ 1node, N=48 ~ 3nodes, N=128 ~ 8nodes)  
    (8 nodes: 45 mins on supermike)
-   if parallel commmand has warning to cite, just type "parallel --cite" and enter; then type "will cite". The warning will dispear.
-   if you have install biopython but still got error "no module named Bio", it probably you forgot to set the PYTHONPATH 
+   * if parallel commmand has warning to cite, just type "parallel --cite" and enter; then type "will cite". The warning will dispear.
+   * if you have install biopython but still got error "no module named Bio", it probably you forgot to set the PYTHONPATH 
 3. 'python combine_folder.py' can combine N part into one file.
 4. load module python, gcc, gnuparallel all included in ~/.modules
