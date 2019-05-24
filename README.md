@@ -1,5 +1,11 @@
 # ENSP_crystal_structure_match  
-
+###  Before processing and downloading the sequences from Ensembl:
+###  Remember to convert 'X' , '*' and 'U' to 'C'  
+```  
+$ sed -i 's/X/C/g' *
+$ sed -i 's/*/C/g' *
+$ sed -i 's/U/C/g' *
+```  
 ###  Library packages needed:  
 ``` 
 pandas, biopython, python2.7 
